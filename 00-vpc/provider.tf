@@ -7,8 +7,8 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "remote-state-86s-dev"
-    key    = "roboshop-eks-vpc"
+    bucket = "remote-state-86s-hari-0601"
+    key    = "Chandu.pem"
     region = "us-east-1"
     use_lockfile = true
     encrypt = true
