@@ -1,20 +1,14 @@
 terraform {
+  required_version = ">= 1.5"
+
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "6.16.0"
+      version = "~> 5.0"
     }
-  }
-
-  backend "s3" {
-    bucket       = "remote-state-86s-hari-0601"
-    key          = "Chandu.pem"
-    region       = "us-east-1"
-    use_lockfile = true
-    encrypt      = true
   }
 }
 
 provider "aws" {
-  region = "us-east-1"
+  region = var.aws_region
 }
